@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/13 16:45:41 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/13 17:42:48 by rbroque          ###   ########.fr       */
+/*   Created: 2020/04/13 17:56:07 by rbroque           #+#    #+#             */
+/*   Updated: 2020/04/13 18:06:07 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_print_reverse_alphabet(void)
+void	ft_print_numbers(void)
 {
-	char	i;
+	int		n;
 
-	i = 'z';
-	while (i >= 'a')
+	n = '0';
+	while (n <= '9')
 	{
-		ft_putchar(i);
-		i--;
+		ft_putchar(n);
+		n++;
 	}
 	ft_putchar('\n');
 }
