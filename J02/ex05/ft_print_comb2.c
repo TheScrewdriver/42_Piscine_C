@@ -6,7 +6,7 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/16 11:45:05 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/18 15:08:18 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/18 16:14:28 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,8 @@ void	ft_print_comb2(void)
 			if (second != first)
 			{
 				ft_list4(first, second);
-				second++;
 			}
-			else if (second == first)
-			{
-				second++;
-			}
+			second++;
 		}
 		first++;
 	}
