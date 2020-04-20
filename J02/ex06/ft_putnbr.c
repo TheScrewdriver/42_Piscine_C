@@ -6,7 +6,7 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 15:36:24 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/21 00:34:00 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/21 00:58:05 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ int		power(int a, int b)
 
 void	ft_putnbr(int nb)
 {
-	int	dozens;
+	int	decades;
 	int	n;
 
-	dozens = 0;
+	decades = 0;
 	n = nb;
 	while (n / 10 != 0)
 	{
-		dozens++;
+		decades++;
 		n = n / 10;
 	}
 	if (nb < 0)
@@ -43,11 +43,11 @@ void	ft_putnbr(int nb)
 		nb = -nb;
 	}
 	n = nb;
-	while (dozens != 0 && nb != 0)
+	while (decades != 0 && nb != 0)
 	{
-		ft_putchar((n / power(10, dozens)) + 48);
-		n = n % (power(10, dozens));
-		dozens--;
+		ft_putchar((n / power(10, decades)) + 48);
+		n = n % (power(10, decades));
+		decades--;
 	}
 	ft_putchar((nb % 10) + 48);
 }
