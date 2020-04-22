@@ -1,17 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/23 00:45:05 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/23 01:17:20 by rbroque          ###   ########.fr       */
+/*   Created: 2020/04/23 01:00:06 by rbroque           #+#    #+#             */
+/*   Updated: 2020/04/23 01:18:46 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
 {
-	*div = a / b;
-	*mod = a % b;
+	while (*str != 0)
+	{
+		ft_putchar(*str);
+		str = str + 1;
+	}
 }

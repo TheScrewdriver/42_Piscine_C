@@ -6,11 +6,11 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 00:50:24 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/23 00:56:49 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/23 01:18:04 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ultimate_div(int *a, int *b)
+void	ft_ultimate_div(int *a, int *b)
 {
 	int temp;
 
