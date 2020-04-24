@@ -6,7 +6,7 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 01:21:10 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/23 01:33:45 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/24 01:23:48 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int		ft_strlen(char *str)
 	int		length;
 
 	length = 0;
-	while (*str >= 0)
+	while (*str != '\0')
 	{
 		str++;
 		length++;

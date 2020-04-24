@@ -6,15 +6,15 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 15:36:24 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/21 00:58:05 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/24 23:46:39 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-int		power(int a, int b)
+int	power(int a, int b)
 {
-	int		y;
+	int	y;
 
 	y = a;
 	while (b != 1)
@@ -27,27 +27,29 @@ int		power(int a, int b)
 
 void	ft_putnbr(int nb)
 {
-	int	decades;
-	int	n;
+	int		decades;
+	long	nbr;
+	long	n;
 
 	decades = 0;
-	n = nb;
+	nbr = nb;
+	n = nbr;
 	while (n / 10 != 0)
 	{
 		decades++;
 		n = n / 10;
 	}
-	if (nb < 0)
+	if (nbr < 0)
 	{
 		ft_putchar('-');
-		nb = -nb;
+		nbr = -nbr;
 	}
-	n = nb;
-	while (decades != 0 && nb != 0)
+	n = nbr;
+	while (decades != 0 && nbr != 0)
 	{
 		ft_putchar((n / power(10, decades)) + 48);
 		n = n % (power(10, decades));
 		decades--;
 	}
-	ft_putchar((nb % 10) + 48);
+	ft_putchar((nbr % 10) + 48);
 }
