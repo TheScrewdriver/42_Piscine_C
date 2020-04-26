@@ -6,11 +6,9 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/23 01:42:09 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/26 21:52:06 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/27 01:15:45 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void ft_putchar(char c);
 
 char	*ft_strrev(char *str)
 {
@@ -18,27 +16,18 @@ char	*ft_strrev(char *str)
 	int		i;
 	char	temp;
 
-	
 	len = 0;
 	i = 0;
-	while (*str != '\0')
-	{
-		str++;
+	while (str[len] != '\0')
 		len++;
-	}
-	while (len > 0)
+	len--;
+	while (i < len)
 	{
-		temp = str[len]
-		str[i] = str[len];
+		temp = str[len];
+		str[len] = str[i];
+		str[i] = temp;
 		len--;
 		i++;
 	}
 	return (str);
-}
-
-int		main(void)
-{
-	ft_strrev("Bonjour");
-	ft_putchar('h');
-	return(0);
 }
