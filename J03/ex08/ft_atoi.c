@@ -6,33 +6,38 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 09:08:53 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/27 17:40:21 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/28 11:44:07 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *c)
+#include <stdlib.h>
+#include <stdio.h>
+
+int		ft_atoi(char *str)
 {
 	int		i;
-	int		sign;
 	int		result;
 
 	i = 0;
-	sign = 1;
 	result = 0;
-	while (c[i] != '\0' && ((c[i] - 48 <= 9 && c[i] - 48 >= 0) || c[i] == '-'))
-	{
-		if (c[i] == '-')
-		{
-			if (c[0] == '-' && c[i + 1] != '\0')
-			{
-				i++;
-				sign = -1;
-			}
-			else
-				return (result * sign);
-		}
-		result = result * 10 + c[i] - '0';
+	while (*str == ' ' || (*str >= 8 && *str <= 13))
+		str++;
+	if (str[i] == '-' || str[i] == '+')
 		i++;
-	}
-	return (result * sign);
+	while (str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
+		{
+			result = result * 10 + str[i] - '0';
+			i++;
+		}
+	return (result = (str[0] == '-')? -result : result);
+}
+
+int		main(void)
+{
+	char	c[] = "872389692662894696878778473948878923472307";
+	
+	printf("%d",ft_atoi(c));
+	printf("%s", "\n");
+	printf("%d",  atoi(c));
+	return (0);
 }
