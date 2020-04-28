@@ -6,12 +6,9 @@
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 09:08:53 by rbroque           #+#    #+#             */
-/*   Updated: 2020/04/28 11:44:07 by rbroque          ###   ########.fr       */
+/*   Updated: 2020/04/28 19:18:22 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdlib.h>
-#include <stdio.h>
 
 int		ft_atoi(char *str)
 {
@@ -30,14 +27,4 @@ int		ft_atoi(char *str)
 			i++;
 		}
 	return (result = (str[0] == '-')? -result : result);
-}
-
-int		main(void)
-{
-	char	c[] = "872389692662894696878778473948878923472307";
-	
-	printf("%d",ft_atoi(c));
-	printf("%s", "\n");
-	printf("%d",  atoi(c));
-	return (0);
 }
