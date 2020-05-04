@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/03 23:56:56 by rbroque           #+#    #+#             */
-/*   Updated: 2020/05/04 16:11:07 by rbroque          ###   ########.fr       */
+/*   Created: 2020/05/04 09:14:57 by rbroque           #+#    #+#             */
+/*   Updated: 2020/05/04 16:12:48 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 
-int		ft_fibonacci(int index)
+int	ft_sqrt(int nb)
 {
-	int		nb;
+	int		sqrt;
 
-	if (index > INT_MAX)
-		return (-1);
-	if (index < 0)
-		return (-1);
-	if (index == 0)
-		return (0);
-	nb = ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
+	sqrt = 0;
 	if (nb > INT_MAX || nb < INT_MIN)
-		return (-1);
-	return ((nb < 0) ? -nb : nb);
+		return (0);
+	while (sqrt * sqrt < nb && sqrt * sqrt != nb)
+		sqrt++;
+	if (sqrt * sqrt == nb)
+		return (sqrt);
+	return (0);
 }
