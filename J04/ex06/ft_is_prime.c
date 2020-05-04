@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <romannbroque@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/03 23:56:56 by rbroque           #+#    #+#             */
-/*   Updated: 2020/05/04 21:38:57 by rbroque          ###   ########.fr       */
+/*   Created: 2020/05/04 17:01:58 by rbroque           #+#    #+#             */
+/*   Updated: 2020/05/04 21:56:47 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <limits.h>
 
-int		ft_fibonacci(int index)
+int		ft_is_prime(int nb)
 {
-	int		nb;
+	int		divise;
 
-	if (index > INT_MAX)
-		return (-1);
-	if (index < 0)
-		return (-1);
-	if (index == 0)
+	divise = 2;
+	if (nb <= 1 || nb > INT_MAX)
 		return (0);
-	nb = ft_fibonacci(index - 1) + ft_fibonacci(index - 2);
-	if (nb > INT_MAX || nb < INT_MIN)
-		return (-1);
-	return ((nb < 0) ? -nb : nb);
+	while (nb % divise != 0 && divise + 1 < nb)
+		divise++;
+	if (nb % divise == 0)
+		return (0);
+	return (1);
 }
